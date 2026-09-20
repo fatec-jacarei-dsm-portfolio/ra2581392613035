@@ -2,13 +2,13 @@
 
 **Aluno:** Guilherme Matos Paiva  
 **Curso:** Desenvolvimento de Software Multiplataforma  
-**Turma:** 2º Semestre - 2026  
+**Turma:** 1º Semestre - 2026  
 
 ---
 
 **Portfólio Online**
 
-🔗 [Acesse o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613035)
+🔗 [Acesse o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613035/)
 
 ---
 
