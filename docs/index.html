@@ -1,147 +1,388 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guilherme Matos Paiva - Portfólio</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5.0.0/index.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/base/variables.css" />
+    <link rel="stylesheet" href="assets/css/layout/navbar.css" />
+    <link rel="stylesheet" href="assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="assets/css/components/hero.css" />
+    <link rel="stylesheet" href="assets/css/components/about.css" />
+    <link rel="stylesheet" href="assets/css/components/projects.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- ========== APRESENTAÇÃO ========== -->
-    <header id="apresentacao" class="secao">
-      <div class="apresentacao-container">
-        <div class="foto-perfil-wrapper">
-          <img
-            src="assets/img/pfp.jpeg"
-            alt="Foto de perfil de Guilherme Matos Paiva"
-            class="foto-perfil"
-          />
-        </div>
-        <div class="apresentacao-conteudo">
-          <h1>Guilherme Matos Paiva</h1>
-          <p class="frase-impacto">
-            Front-end &amp; Design de Interfaces (UI/UX)
-          </p>
-          <p class="apresentacao-texto">
-            Estudante de Desenvolvimento de Software Multiplataforma na Fatec
-            Jacareí. Escreva aqui 2 ou 3 frases sobre você.
-          </p>
-          <p class="objetivos"></p>
-        </div>
-      </div>
-    </header>
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- ========== PROJETOS ========== -->
-    <main>
-      <section id="projetos" class="secao">
-        <h2>Projetos</h2>
-
-        <!-- Acadêmicos -->
-        <div class="categoria-projetos">
-          <h3>Acadêmicos</h3>
-          <div class="lista-projetos">
-            <article class="card-projeto">
-              <h4>Nome do projeto</h4>
-              <p class="semestre">1DSM - 1º Sem. 2026</p>
-              <p class="descricao">Breve descrição do que o projeto faz.</p>
-              <p class="contribuicao">
-                <strong>Contribuição pessoal:</strong> o que você fez
-                especificamente.
-              </p>
-              <p class="tecnologias">
-                <strong>Tecnologias:</strong> HTML, CSS, JavaScript
-              </p>
-              <a
-                href="https://github.com/seu-usuario/seu-projeto"
-                target="_blank"
-                rel="noopener"
-                >Ver repositório</a
-              >
-            </article>
-          </div>
-        </div>
-
-        <!-- Profissionais -->
-        <div class="categoria-projetos">
-          <h3>Profissionais</h3>
-          <div class="lista-projetos">
-            <article class="card-projeto">
-              <h4>Nome do projeto</h4>
-              <p class="semestre">Semestre em que foi feito</p>
-              <p class="descricao">Breve descrição do que o projeto faz.</p>
-              <p class="contribuicao">
-                <strong>Contribuição pessoal:</strong> o que você fez
-                especificamente.
-              </p>
-              <p class="tecnologias">
-                <strong>Tecnologias:</strong> tecnologia 1, tecnologia 2
-              </p>
-              <a href="#" target="_blank" rel="noopener">Ver repositório</a>
-            </article>
-          </div>
-        </div>
-
-        <!-- Pessoais -->
-        <div class="categoria-projetos">
-          <h3>Pessoais</h3>
-          <div class="lista-projetos">
-            <article class="card-projeto">
-              <h4>Nome do projeto</h4>
-              <p class="semestre">Semestre em que foi feito</p>
-              <p class="descricao">Breve descrição do que o projeto faz.</p>
-              <p class="contribuicao">
-                <strong>Contribuição pessoal:</strong> o que você fez
-                especificamente.
-              </p>
-              <p class="tecnologias">
-                <strong>Tecnologias:</strong> tecnologia 1, tecnologia 2
-              </p>
-              <a href="#" target="_blank" rel="noopener">Ver repositório</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== INFORMAÇÕES COMPLEMENTARES ========== -->
-      <section id="informacoes" class="secao">
-        <h2>Informações Complementares</h2>
-        <ul class="lista-info">
-          <li>
-            <strong>Formação acadêmica:</strong> Desenvolvimento de Software
-            Multiplataforma - Fatec Jacareí
-          </li>
-          <li><strong>Cursos e certificações:</strong> [liste aqui]</li>
-          <li><strong>Conhecimentos técnicos:</strong> [liste aqui]</li>
-          <li><strong>Idiomas:</strong> [liste aqui]</li>
-          <li><strong>Hobbies e interesses:</strong> [liste aqui]</li>
-        </ul>
-      </section>
-    </main>
-
-    <!-- ========== CONTATOS ========== -->
-    <footer id="contatos" class="secao">
-      <h2>Contatos</h2>
-      <ul class="lista-contatos">
+    <!-- NAVBAR -->
+    <nav>
+      <ul class="nav-links">
         <li>
-          <a
-            href="https://github.com/seu-usuario"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
+          <a href="#inicio" class="active" data-pt="Início" data-en="Home"
+            >Início</a
           >
         </li>
+        <li><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a></li>
         <li>
-          <a
-            href="https://linkedin.com/in/seu-usuario"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
+          <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
         </li>
       </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="langPT" title="Português">
+            <img
+              src="https://flagcdn.com/w160/br.png"
+  srcset="https://flagcdn.com/w320/br.png 2x"
+  width="160"
+              alt="Português"
+            />
+          </button>
+
+          <button class="lang-btn" id="langEN" title="English">
+            <img
+              src="https://flagcdn.com/w160/us.png"
+  srcset="https://flagcdn.com/w320/us.png 2x"
+  width="160"
+              alt="English"
+            />
+          </button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+          <svg id="sunIcon" viewBox="0 0 24 24">
+            <path
+              d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-3a1 1 0 01-1-1V1a1 1 0 112 0v2a1 1 0 01-1 1zm0 18a1 1 0 01-1-1v-2a1 1 0 112 0v2a1 1 0 01-1 1zm9-9h-2a1 1 0 110-2h2a1 1 0 110 2zM5 13H3a1 1 0 110-2h2a1 1 0 110 2zm13.07-7.07a1 1 0 01-1.41 0l-1.42-1.42a1 1 0 111.42-1.41l1.41 1.41a1 1 0 010 1.42zM7.76 19.07a1 1 0 01-1.41 0l-1.42-1.41a1 1 0 111.42-1.42l1.41 1.42a1 1 0 010 1.41zM19.07 19.07a1 1 0 01-1.41 0l-1.42-1.41a1 1 0 111.42-1.42l1.41 1.42a1 1 0 010 1.41zM7.76 4.93a1 1 0 01-1.41 0L4.93 3.51a1 1 0 111.42-1.41L7.76 3.51a1 1 0 010 1.42z"
+            />
+          </svg>
+          <svg id="moonIcon" viewBox="0 0 24 24" style="display: none">
+            <path
+              d="M21.64 13a1 1 0 00-1.05-.14 8.05 8.05 0 01-3.37.73A8.15 8.15 0 019.08 5.49a8.59 8.59 0 01.25-2 1 1 0 00-1.28-1.17A10.14 10.14 0 1021.64 13z"
+            />
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburgerBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+      <button class="close-btn" id="closeNav">&times;</button>
+      <a href="#inicio" data-pt="Início" data-en="Home">Início</a>
+      <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="hero-avatar fade-in">
+          <div class="avatar-wrapper">
+            <div class="avatar-placeholder">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path
+                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero-text fade-in">
+          <h1>Guilherme Matos Paiva</h1>
+          <p
+            class="subtitle"
+            data-pt="Desenvolvedor Frontend & Designer UI/UX"
+            data-en="Frontend Developer & UI/UX Designer"
+          >
+            Desenvolvedor Frontend & Designer UI/UX
+          </p>
+          <p
+            data-pt="Criando interfaces digitais onde design e tecnologia trabalham em perfeita harmonia. Transformando ideias complexas em experiências simples, intuitivas e memoráveis."
+            data-en="Creating digital interfaces where design and technology work in perfect harmony. Transforming complex ideas into simple, intuitive, and memorable experiences."
+          >
+            Criando interfaces digitais onde design e tecnologia trabalham em
+            perfeita harmonia. Transformando ideias complexas em experiências
+            simples, intuitivas e memoráveis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <h2 class="section-title fade-in" data-pt="Sobre mim" data-en="About me">
+        Sobre mim
+      </h2>
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <p
+            data-pt="Sou desenvolvedor Frontend com foco em UI/UX, dedicado a transformar ideias em experiências digitais funcionais, intuitivas e visualmente marcantes."
+            data-en="I'm a Frontend developer focused on UI/UX, dedicated to transforming ideas into functional, intuitive, and visually striking digital experiences."
+          >
+            Sou desenvolvedor Frontend com foco em UI/UX, dedicado a transformar
+            ideias em experiências digitais funcionais, intuitivas e visualmente
+            marcantes.
+          </p>
+          <p
+            data-pt="Estou sempre buscando aprender, experimentar novas tecnologias e evoluir como profissional, criando produtos digitais que façam sentido para quem realmente vai utilizá-los."
+            data-en="I'm always seeking to learn, experiment with new technologies, and grow as a professional, creating digital products that make sense for those who will actually use them."
+          >
+            Estou sempre buscando aprender, experimentar novas tecnologias e
+            evoluir como profissional, criando produtos digitais que façam
+            sentido para quem realmente vai utilizá-los.
+          </p>
+          <p
+            data-pt="Meu trabalho une design e desenvolvimento para criar interfaces que equilibram estética, usabilidade e performance. Cada projeto parte de uma necessidade e ganha forma através de decisões cuidadosas, buscando tornar a experiência mais simples, fluida e intuitiva."
+            data-en="My work combines design and development to create interfaces that balance aesthetics, usability, and performance. Each project starts from a need and takes shape through careful decisions, aiming to make the experience simpler, more fluid, and intuitive."
+          >
+            Meu trabalho une design e desenvolvimento para criar interfaces que
+            equilibram estética, usabilidade e performance. Cada projeto parte
+            de uma necessidade e ganha forma através de decisões cuidadosas,
+            buscando tornar a experiência mais simples, fluida e intuitiva.
+          </p>
+        </div>
+        <div class="about-visual fade-in">
+          <div class="about-card">
+            <div class="about-card-inner">
+              <svg viewBox="0 0 24 24" fill="#888">
+                <path
+                  d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+                />
+              </svg>
+              <span>Code & Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+      <h2 class="section-title fade-in" data-pt="Projetos" data-en="Projects">
+        Projetos
+      </h2>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <div
+              class="project-image-inner"
+              style="background: linear-gradient(135deg, #1a1a2e, #16213e)"
+            >
+              <svg viewBox="0 0 24 24" fill="#a3e635">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6zm0 4h8v2H6zm10 0h2v2h-2zm-6-4h8v2h-8z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 data-pt="Dashboard Analytics" data-en="Analytics Dashboard">
+              Dashboard Analytics
+            </h3>
+            <p
+              data-pt="Painel de controle interativo com visualização de dados em tempo real, gráficos dinâmicos e métricas personalizáveis."
+              data-en="Interactive control panel with real-time data visualization, dynamic charts, and customizable metrics."
+            >
+              Painel de controle interativo com visualização de dados em tempo
+              real, gráficos dinâmicos e métricas personalizáveis.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">D3.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <div
+              class="project-image-inner"
+              style="background: linear-gradient(135deg, #0f3460, #533483)"
+            >
+              <svg viewBox="0 0 24 24" fill="#a3e635">
+                <path
+                  d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 data-pt="App de Finanças" data-en="Finance App">
+              App de Finanças
+            </h3>
+            <p
+              data-pt="Aplicativo mobile para gestão financeira pessoal com categorização automática de gastos e metas de economia."
+              data-en="Mobile app for personal financial management with automatic expense categorization and savings goals."
+            >
+              Aplicativo mobile para gestão financeira pessoal com categorização
+              automática de gastos e metas de economia.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <div
+              class="project-image-inner"
+              style="background: linear-gradient(135deg, #2d3436, #636e72)"
+            >
+              <svg viewBox="0 0 24 24" fill="#a3e635">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 data-pt="E-commerce Redesign" data-en="E-commerce Redesign">
+              E-commerce Redesign
+            </h3>
+            <p
+              data-pt="Redesign completo de plataforma e-commerce focado em conversão, com experiência de compra otimizada e acessível."
+              data-en="Complete redesign of an e-commerce platform focused on conversion, with optimized and accessible shopping experience."
+            >
+              Redesign completo de plataforma e-commerce focado em conversão,
+              com experiência de compra otimizada e acessível.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <div
+              class="project-image-inner"
+              style="background: linear-gradient(135deg, #1e3a5f, #2d6a4f)"
+            >
+              <svg viewBox="0 0 24 24" fill="#a3e635">
+                <path
+                  d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 15h14v3H5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 data-pt="Landing Page SaaS" data-en="SaaS Landing Page">
+              Landing Page SaaS
+            </h3>
+            <p
+              data-pt="Landing page moderna com animações suaves, design responsivo e foco em conversão para produto SaaS."
+              data-en="Modern landing page with smooth animations, responsive design, and conversion focus for a SaaS product."
+            >
+              Landing page moderna com animações suaves, design responsivo e
+              foco em conversão para produto SaaS.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML/CSS</span>
+              <span class="project-tag">GSAP</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <div
+              class="project-image-inner"
+              style="background: linear-gradient(135deg, #3d0066, #7b2cbf)"
+            >
+              <svg viewBox="0 0 24 24" fill="#a3e635">
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 data-pt="Blog Platform" data-en="Blog Platform">
+              Blog Platform
+            </h3>
+            <p
+              data-pt="Plataforma de blog com editor rich text, sistema de tags, comentários e tema personalizável."
+              data-en="Blog platform with rich text editor, tagging system, comments, and customizable theme."
+            >
+              Plataforma de blog com editor rich text, sistema de tags,
+              comentários e tema personalizável.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Vue.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <div
+              class="project-image-inner"
+              style="background: linear-gradient(135deg, #1b4332, #40916c)"
+            >
+              <svg viewBox="0 0 24 24" fill="#a3e635">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 data-pt="Design System" data-en="Design System">
+              Design System
+            </h3>
+            <p
+              data-pt="Sistema de design completo com componentes reutilizáveis, tokens de design e documentação interativa."
+              data-en="Complete design system with reusable components, design tokens, and interactive documentation."
+            >
+              Sistema de design completo com componentes reutilizáveis, tokens
+              de design e documentação interativa.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Storybook</span>
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">CSS Variables</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p
+        data-pt="© 2026 Guilherme Matos Paiva. Todos os direitos reservados."
+        data-en="© 2026 Guilherme Matos Paiva. All rights reserved."
+      >
+        © 2026 Guilherme Matos Paiva. Todos os direitos reservados.
+      </p>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

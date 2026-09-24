@@ -1,136 +1,113 @@
-:root {
-  --main-color: #92dd0f;
-  --font-color: #f7f7f7;
-  --border: #282828;
-  --background: #131313;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--font-color);
-}
-
-.secao {
-  max-width: 900px;
+/* DIVIDER */
+.divider {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  height: 1px;
+  background: var(--border);
 }
 
-/* Apresentação */
-#apresentacao {
-  border-bottom: 1px solid var(--border);
+/* SECTIONS */
+section {
+  padding: 6rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.apresentacao-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.section-title {
+  font-family: "Source Serif 4", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 700;
 }
 
-.foto-perfil-wrapper {
-  flex: 0 0 220px;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: 12px;
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
-.foto-perfil {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.apresentacao-conteudo h1 {
-  font-size: 2rem;
-  margin-bottom: 8px;
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 1001;
+  transition: width 0.1s linear;
 }
 
-.frase-impacto {
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--main-color);
-  margin-bottom: 16px;
-}
+/* RESPONSIVE
+   Fica por último de propósito: como este arquivo é carregado depois de
+   navbar.css, hero.css, about.css e projects.css, essas regras sobrescrevem
+   os estilos "desktop" desses componentes na cascata. */
+@media (max-width: 900px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
 
-.apresentacao-conteudo .apresentacao-texto {
-  margin-bottom: 12px;
-}
+  .nav-links {
+    display: none;
+  }
 
-.apresentacao-conteudo .objetivos {
-  font-weight: bold;
-}
+  .hamburger {
+    display: flex;
+  }
 
-/* Empilha em telas estreitas */
-@media (max-width: 640px) {
-  .apresentacao-container {
+  .hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .hero-content {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 
-  .foto-perfil-wrapper {
-    flex-basis: auto;
+  .avatar-wrapper {
     width: 200px;
+    height: 200px;
   }
-}
 
-/* Projetos */
-.categoria-projetos {
-  margin-bottom: 32px;
-}
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
 
-.categoria-projetos h3 {
-  color: var(--main-color);
-  margin-bottom: 12px;
-}
+  .hero-text p {
+    margin: 0 auto;
+  }
 
-.lista-projetos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-}
+  section {
+    padding: 4rem 1.5rem;
+  }
 
-.card-projeto {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 16px;
-}
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 
-.card-projeto h4 {
-  margin-bottom: 4px;
-}
+  .about-visual {
+    order: -1;
+  }
 
-.card-projeto .semestre {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 8px;
-}
+  .about-card {
+    max-width: 300px;
+  }
 
-.card-projeto p {
-  margin-bottom: 8px;
-}
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 
-.card-projeto a {
-  color: var(--main-color);
-  font-weight: bold;
-}
-
-/* Informações complementares */
-.lista-info li {
-  margin-bottom: 8px;
-}
-
-/* Contatos */
-#contatos {
-  text-align: center;
-}
-
-.lista-contatos {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.lista-contatos a {
-  color: var(--main-color);
-  font-weight: bold;
+  .section-title {
+    font-size: 2rem;
+  }
 }
