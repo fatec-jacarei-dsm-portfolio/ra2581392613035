@@ -66,6 +66,40 @@
   opacity: 0.2;
 }
 
+.project-github-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+  z-index: 2;
+}
+
+.project-image:hover .project-github-overlay,
+.project-github-overlay:focus-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-github-overlay svg {
+  width: 34px;
+  height: 34px;
+  fill: var(--accent);
+  opacity: 1;
+}
+
 .project-info {
   padding: 1.8rem;
 }
