@@ -47,10 +47,8 @@
   background: linear-gradient(145deg, #e8e8e8, #d4d4d4);
 }
 
-.about-card-inner svg {
-  width: 60px;
-  height: 60px;
-  opacity: 0.3;
+.about-card-inner img {
+  transform: scale(60%);
 }
 
 .about-card-inner span {

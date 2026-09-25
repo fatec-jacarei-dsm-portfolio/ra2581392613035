@@ -1,4 +1,3 @@
-// Alterna o idioma do site entre PT e EN usando os atributos data-pt/data-en
 const langPT = document.getElementById("langPT");
 const langEN = document.getElementById("langEN");
 let currentLang = "pt";

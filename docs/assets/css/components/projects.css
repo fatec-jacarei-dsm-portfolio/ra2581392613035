@@ -4,6 +4,10 @@
   gap: 2rem;
 }
 
+.projects-grid h3 {
+  text-align: center;
+}
+
 .project-card {
   background: var(--bg-card);
   border-radius: 16px;
@@ -37,6 +41,10 @@
   align-items: center;
   justify-content: center;
   transition: transform var(--transition);
+}
+
+.semester1-icon{
+  transform: scale(40%);
 }
 
 .project-card:hover .project-image-inner {

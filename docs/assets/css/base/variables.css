@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/* ===== OCULTAR BARRA DE ROLAGEM ===== */
 html {
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */

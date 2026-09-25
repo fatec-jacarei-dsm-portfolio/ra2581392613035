@@ -1,4 +1,3 @@
-// Efeitos ligados ao scroll: link ativo no menu, barra de progresso e fade-in
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-links a, .mobile-nav a");
 
@@ -21,7 +20,6 @@ function updateActiveLink() {
 
 window.addEventListener("scroll", updateActiveLink);
 
-// Barra de progresso de leitura no topo
 const scrollProgress = document.getElementById("scrollProgress");
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
@@ -30,7 +28,6 @@ window.addEventListener("scroll", () => {
   scrollProgress.style.width = progress + "%";
 });
 
-// Fade-in dos elementos conforme entram na tela
 const fadeElements = document.querySelectorAll(".fade-in");
 const observer = new IntersectionObserver(
   (entries) => {

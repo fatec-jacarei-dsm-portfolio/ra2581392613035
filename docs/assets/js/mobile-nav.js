@@ -1,4 +1,3 @@
-// Abre/fecha o menu mobile (hamburguer)
 const hamburgerBtn = document.getElementById("hamburgerBtn");
 const mobileNav = document.getElementById("mobileNav");
 const closeNav = document.getElementById("closeNav");
