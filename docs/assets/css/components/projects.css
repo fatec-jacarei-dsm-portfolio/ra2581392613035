@@ -8,6 +8,15 @@
   text-align: center;
 }
 
+.projects-grid p{
+  text-align: center;
+}
+
+.projects-grid p.project-done {
+  text-align: left;
+}
+
+
 .project-card {
   background: var(--bg-card);
   border-radius: 16px;
