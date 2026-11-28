@@ -14,6 +14,6 @@
 
 **Vídeos de Apresentação**
 
-🎤 2DSM - [Vídeo](LINK_VIDEO_2DSM)  
-🎤 4DSM - [Vídeo](LINK_VIDEO_4DSM)  
-🎤 6DSM - [Vídeo](LINK_VIDEO_6DSM)
+🎤 2DSM - [Pitch 01 – 1º e 2º Semestres](https://youtu.be/TDQcbW2RtS4)  
+🎤 4DSM - Pitch 02 – 3º e 4º Semestres <br>
+🎤 6DSM - Pitch 03 – 5º e 6º Semestres
